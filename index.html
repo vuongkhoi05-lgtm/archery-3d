@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        user-scalable=no"
+    >
+
+    <title>Archery 3D</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three":
+            "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<div id="game">
+
+    <div id="topBar">
+
+        <div class="stat">
+            ❤️ <span id="lives">3</span>
+        </div>
+
+        <div class="stat">
+            🪙 <span id="coins">0</span>
+        </div>
+
+        <div class="stat">
+            🎯 <span id="score">0</span>
+        </div>
+
+        <div class="stat">
+            🔥 x<span id="combo">0</span>
+        </div>
+
+        <div class="stat">
+            🗺️ LV <span id="level">1</span>
+        </div>
+
+    </div>
+
+
+    <div id="wind">
+        🌬️ Gió:
+        <span id="windValue">0</span>
+    </div>
+
+
+    <div id="power">
+        <div id="powerFill"></div>
+    </div>
+
+
+    <div id="message">
+        Kéo để ngắm — thả để bắn
+    </div>
+
+
+    <div id="crosshair">
+        +
+    </div>
+
+
+    <div id="menu">
+
+        <h1>🏹 ARCHERY 3D</h1>
+
+        <p>Thử thách khả năng bắn cung của bạn</p>
+
+        <button id="startButton">
+            BẮT ĐẦU
+        </button>
+
+        <button id="historyButton">
+            📜 LỊCH SỬ
+        </button>
+
+        <button id="achievementButton">
+            🏆 THÀNH TÍCH
+        </button>
+
+    </div>
+
+
+    <div id="historyPanel" class="panel">
+
+        <h2>📜 Lịch sử</h2>
+
+        <div id="historyList"></div>
+
+        <button class="closeButton">
+            Đóng
+        </button>
+
+    </div>
+
+
+    <div id="achievementPanel" class="panel">
+
+        <h2>🏆 Thành tích</h2>
+
+        <div id="achievementList"></div>
+
+        <button class="closeButton">
+            Đóng
+        </button>
+
+    </div>
+
+
+    <div id="gameOver">
+
+        <h1>GAME OVER</h1>
+
+        <div class="result">
+            🎯 Điểm:
+            <strong id="finalScore">0</strong>
+        </div>
+
+        <div class="result">
+            🪙 Coin:
+            <strong id="finalCoins">0</strong>
+        </div>
+
+        <div class="result">
+            🏆 Kỷ lục:
+            <strong id="finalHighScore">0</strong>
+        </div>
+
+        <button id="restartButton">
+            CHƠI LẠI
+        </button>
+
+        <button id="menuButton">
+            MENU
+        </button>
+
+    </div>
+
+</div>
+
+<script type="module" src="game.js"></script>
+
+</body>
+</html>
