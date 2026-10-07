@@ -1,5 +1,7 @@
 
-
+import {
+    addPvPScore
+} from "./pvpUI.js";
 import {
     createPvPUI
 } from "./pvpUI.js";import {

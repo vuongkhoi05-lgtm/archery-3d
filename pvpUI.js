@@ -1,4 +1,8 @@
 import {
+    submitPvPScore,
+    getPvPScores
+} from "./pvpScore.js";
+import {
     createRoom,
     joinRoom,
     getRoom,
@@ -212,10 +216,45 @@ async function handleRealtime(
         }
     }
 
-    if (type === "score") {
-        await updateScores();
-    }
+    async function updateScores() {
+    if (!currentRoom) return;
+
+    const scores =
+        await getPvPScores(
+            currentRoom.id
+        );
+
+    const myScore =
+        document.getElementById(
+            "my-score"
+        );
+
+    const enemyScore =
+        document.getElementById(
+            "enemy-score"
+        );
+
+    if (!myScore || !enemyScore)
+        return;
+
+    const mine =
+        scores.find(
+            item => item.isMe
+        );
+
+    const enemy =
+        scores.find(
+            item => !item.isMe
+        );
+
+    myScore.textContent =
+        mine?.score || 0;
+
+    enemyScore.textContent =
+        enemy?.score || 0;
 }
+    }
+
 
 async function updateScores() {
     if (!currentRoom) return;
