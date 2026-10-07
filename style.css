@@ -652,3 +652,98 @@ button:active {
         width: 70vw;
     }
 }
+#pvp-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.pvp-box {
+    width: 260px;
+    padding: 18px;
+    border-radius: 16px;
+
+    background: rgba(15, 20, 35, 0.94);
+    color: white;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.4);
+
+    text-align: center;
+}
+
+.pvp-box h2 {
+    margin-top: 0;
+}
+
+.pvp-box button,
+.pvp-box input {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-top: 8px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 10px;
+}
+
+.pvp-box button {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pvp-box input {
+    background: white;
+    color: black;
+}
+
+.pvp-divider {
+    margin: 10px 0;
+    opacity: .6;
+}
+
+#pvp-status {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+#pvp-room {
+    margin-top: 12px;
+}
+
+.room-code {
+    margin-bottom: 8px;
+}
+
+.room-code strong {
+    display: block;
+    font-size: 25px;
+    letter-spacing: 4px;
+    margin-top: 5px;
+}
+
+#pvp-score {
+    margin-top: 15px;
+    padding: 10px;
+
+    border-radius: 10px;
+    background: rgba(255,255,255,.08);
+}
+
+#pvp-score div {
+    margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+    #pvp-panel {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+
+    .pvp-box {
+        width: auto;
+    }
+}

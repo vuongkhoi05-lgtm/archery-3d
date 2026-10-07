@@ -1,5 +1,8 @@
 
+
 import {
+    createPvPUI
+} from "./pvpUI.js";import {
     createCharacter
 } from "./character.js";
 
@@ -289,9 +292,10 @@ const windText =
         "windValue"
     );
 
-const power =
+const powerElement =
     document.getElementById(
         "power"
+    
     );
 
 const powerFill =
